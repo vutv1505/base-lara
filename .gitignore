@@ -1,0 +1,23 @@
+# Created by .ignore support plugin (hsz.mobi)
+.editorconfig
+.idea/
+.phpintel/
+
+_ide_helper.php
+vendor
+composer.lock
+storage/*
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+### Laravel template
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
+
+
+
+

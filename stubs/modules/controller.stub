@@ -1,0 +1,46 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+class $CLASS$ extends $MODULE$Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function index()
+    {
+        return view('$LOWER_NAME$::index');
+    }
+
+    public function create()
+    {
+        return view('$LOWER_NAME$::create');
+    }
+
+    public function store()
+    {
+        return '';
+    }
+
+    public function show($id)
+    {
+        return view('$LOWER_NAME$::show', ['id' => $id]);
+    }
+
+    public function edit($id)
+    {
+        return view('$LOWER_NAME$::edit', ['id' => $id]);
+    }
+
+    public function update($id)
+    {
+        return $id;
+    }
+
+    public function destroy($id)
+    {
+        return $id;
+    }
+}
