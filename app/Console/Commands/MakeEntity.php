@@ -88,6 +88,7 @@ class MakeEntity extends Command
             $this->call($controller_command, $resource_args);
         }
 
+        $path = app_path();
         if (!empty($this->option('path'))) {
             $path = $this->option('path');
             $nameSpace = str_replace('/', '\\', $path);
@@ -107,6 +108,8 @@ class MakeEntity extends Command
             'name'    => $this->argument('name'),
             '--force' => $this->option('force')
         ]);
+
+        $this->call('move:entities', ['path' => $path]);
     }
 
 

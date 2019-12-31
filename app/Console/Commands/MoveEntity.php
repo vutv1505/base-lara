@@ -11,7 +11,7 @@ class MoveEntity extends Command
      *
      * @var string
      */
-    protected $signature = 'move:entity {path}';
+    protected $signature = 'move:entities {path}';
 
     /**
      * The console command description.
@@ -39,10 +39,10 @@ class MoveEntity extends Command
     {
         //
         $path = app_path();
-        if ($this->option('path') != "default") {
-            $path = $this->option('path');
+        if ($this->argument('path') != "default") {
+            $path = $this->argument('path');
         }
-        $moduleEntityPath = config('repository.generator.basePath') . '/' . config('repository.generator.paths.models');
+        $moduleEntityPath = $path . '/' . config('repository.generator.paths.models');
         if (!\File::isDirectory($moduleEntityPath)) {
             $this->warn('Path ' . $moduleEntityPath . ' not found');
             return;

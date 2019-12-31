@@ -70,7 +70,7 @@ class MakeRepository extends Command
 
         if ($makeModel) {
             $this->warn('Move model to app/Entities');
-            $this->call('m:move-entities', ['path' => $path]);
+            $this->call('move:entities', ['path' => $path]);
         }
     }
 }
